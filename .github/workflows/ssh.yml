@@ -9,6 +9,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Install netstat
+        run: sudo apt-get install net-tools -y
       - name: SSH Server
         uses: mdelillo/ssh-server-action@v1.0.0
         with:
